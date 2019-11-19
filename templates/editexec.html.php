@@ -22,7 +22,10 @@
 
     <li>
         <label for="mobile_CSSA_EXEC">Telephone</label>
+        <input type="tel" name="mobile" id="mobile" class="field-divided" value="<?=$exec['mobile_CSSA_EXEC'];?>"/>
+        <!--
         <input type="text" class="tel-number-field" id="mobile1" name="mobile1" value="" maxlength="4" />-<input type="text" class="tel-number-field" id="mobile2" name="mobile2" value="" maxlength="4"  />-<input type="text" class="tel-number-field" id="mobile3" name="mobile3" value="" maxlength="10"/>
+    	-->
     </li>
 
 

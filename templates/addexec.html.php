@@ -32,6 +32,7 @@
         .form-style-1 input[type=text],
         .form-style-1 input[type=date],
         .form-style-1 input[type=email],
+        .form-style-1 input[type=tel],
         textarea,
         select{
             box-sizing: border-box;
@@ -50,6 +51,7 @@
         .form-style-1 input[type=text]:focus,
         .form-style-1 input[type=date]:focus,
         .form-style-1 input[type=email]:focus,
+        .form-style-1 input[type=tel]:focus,
         .form-style-1 textarea:focus,
         .form-style-1 select:focus{
             -moz-box-shadow: 0 0 8px #88D5E9;
@@ -126,27 +128,24 @@
         <input type="email" id="email" name="email" class="field-divided">
         <label for="wechat_CSSA_EXEC">Wechat</label>
         <input type="text" id="wechat" name="wechat" class="field-divided"/>
-        
     </li>
 
     <li>
         <label for="mobile_CSSA_EXEC">Telephone</label>
-        <input type="text" class="tel-number-field" id="mobile1" name="mobile1" value="" maxlength="4" />-<input type="text" class="tel-number-field" id="mobile2" name="mobile2" value="" maxlength="4"  />-<input type="text" class="tel-number-field" id="mobile3" name="mobile3" value="" maxlength="10"/>
+        <input type="tel" name="mobile" id="mobile" class="field-divided" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"/>
     </li>
-
 
     
     <li>
         <label for="studentid_CSSA_EXEC">Student ID<span class="required">*</span></label>
         <input type="text" id="studentid" name="studentid" class="field-divided"/>
-        
     </li>
+
+    <li>
         <label for="faculty_CSSA_EXEC">Faculty<span class="required">*</span></label>
         <input type="text" id="faculty" name="faculty" class="field-divided"/>
         <label for="major_CSSA_EXEC">Major<span class="required">*</span></label>
         <input type="text" id="major" name="major" class="field-divided"/>
-    <li>
-
     </li>
     
 
