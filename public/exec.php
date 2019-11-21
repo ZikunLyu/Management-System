@@ -4,9 +4,11 @@
             include __DIR__ . '/../includes/DatabaseFunction.php';
             
             //sql query
-            $sql = 'SELECT `id_CSSA_EXEC`, `firstname_CSSA_EXEC` FROM `CSSA_EXEC`';
+            //$sql = 'SELECT * FROM `CSSA_EXEC`';
             //get the result after executing the query
-            $students = $pdo->query($sql);
+            //$execs = $pdo->query($sql);
+            /* use allExec to replace all these codes above */
+            $execs = allExecs($pdo);
             
             //for each row element in result, we get the corresponding id and firstname, then we store this (id + firstname) array in an array called students
             /*
@@ -21,7 +23,7 @@
             //start the buffer so that the result of 'include' will be stored into var $outout instead of showing on the screen directly
             ob_start();
             //execute deleteexec.html.php
-            include __DIR__ . '/../templates/deleteexec.html.php';
+            include __DIR__ . '/../templates/exec.html.php';
             
             $output = ob_get_clean();
             

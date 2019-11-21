@@ -7,7 +7,7 @@
         //if firstname is set, it means the user has record
         if (isset($_POST['firstname'])) {
             //after login, there should be a unique user id
-            updateExec($pdo, '12', $_POST['firstname'],
+            updateExec($pdo, _POST['id'], $_POST['firstname'],
                                 $_POST['lastname'],
                                 $_POST['studentid'],
                                 $_POST['faculty'],
@@ -23,7 +23,7 @@
             header('location: exec.php');
         } else {
             //$_GET['id']
-            $exec = getExec($pdo, '12');
+            $exec = getExec($pdo, $_GET['id']);
             
             $title = 'Edit Exec';
             
