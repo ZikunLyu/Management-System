@@ -45,6 +45,23 @@
         query($pdo, "UPDATE `CSSA_EXEC` SET `firstname_CSSA_EXEC` = :firstname, `lastname_CSSA_EXEC` = :lastname, `studentid_CSSA_EXEC` = :studentid, `faculty_CSSA_EXEC` = :faculty, `major_CSSA_EXEC` = :major, `birthday_CSSA_EXEC` = :birthday, `departmentid_CSSA_EXEC` = :departmentid,`activeness_CSSA_EXEC` = :activeness,`jobtitle_CSSA_EXEC` = :jobtitle, `email_CSSA_EXEC` =:email, `mobile_CSSA_EXEC` = :mobile, `wechat_CSSA_EXEC` = :wechat WHERE `id_CSSA_EXEC` = :id", $parameters);
     }
     
+    function updateExec2($pdo, $fields) {
+        $query = "UPDATE `CSSA_EXEC` SET";
+        
+        foreach ($array as $key => $value) {
+            $query .= '`' . $key . '` = :' . $key . ','
+        }
+        
+        $query = rtrim($query, ',');
+        
+        $query .= " WHERE `id` = :primaryKey";
+        
+        //set the :primiay variable
+        $fields['primaryKey'] = $fields['id'];
+        
+        query($pdo, $query, $fields);
+    }
+    
     
     
     function deleteExec($pdo, $id) {

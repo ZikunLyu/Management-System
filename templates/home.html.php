@@ -1,4 +1,3 @@
+<h2>Internet Joke Database</h2>
 
-	<h2>McGill CSSA EXEC Database</h2>
-	<p>Welcome to the McGill CSSA EXEC Management System</p>
-
+<p>Welcome to the Internet Joke Database</p>
