@@ -38,6 +38,27 @@
         query($pdo, $query, $parameters);
     }
     
+    function insertExec2($pdo, $fields) {
+        $query = "INSERT INTO `CSSA_EXEC` ("
+        foreach ($fields as $key => $value) {
+            $query .= "`" . $key . "`,";
+        }
+        
+        $query = rtrim($query, ",");
+        
+        $query .= ") VALUES (";
+        
+        foreach ($fields as $key => $value) {
+            $query .= ":" . $key . ",";
+        }
+        
+        $query = rtrim($query, ",");
+        
+        $query .= ")";
+        
+        query($pdo, $query);
+    }
+    
     function updateExec($pdo, $id, $firstname, $lastname, $studentid, $faculty, $major, $birthday, $departmentid, $activeness, $jobtitle, $email, $mobile, $wechat) {
         
         $parameters = [':firstname'=> $firstname, ':lastname' => $lastname, ':studentid' => $studentid, ':faculty' => $faculty, ':major' => $major, ':birthday' => $birthday, ':departmentid' => $departmentid, ':activeness' => $activeness, ':jobtitle' => $jobtitle, ':email' => $email, ':mobile' => $mobile, ':wechat' => $wechat, ':id' => $id];
