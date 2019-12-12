@@ -1,0 +1,3 @@
+This is a general template we can use to build a website, even though we use CSSA_EXEC as an example.
+
+All methods and classes could be reused fully on the other project later.

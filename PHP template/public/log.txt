@@ -1,0 +1,40 @@
+December 10, 2019
+	float is used to float elements, for example, if you set an element be 
+		float: left;
+	then, the element next to it will be place beside it instead of starting on a new line.
+
+December 11, 2019
+	'==' compares the content, while '===' compares both the content and type.
+	
+	<?php 
+  		// Variable contains integer value 
+		$x = 999; 
+  		// Vatiable contains string value 
+		$y = '999'; 
+  		// Compare $x and $y 
+		if ($x == $y) 
+    			echo 'Same content'; 
+		else
+    			echo 'Different content'; 
+	?> 
+	Output:
+	Same content
+
+	<?php 
+  
+		// Variable contains integer value 
+		$x = 999; 
+  
+		// Vatiable contains string value 
+		$y = '999'; 
+  
+		// Compare $x and $y 
+		if ($x === $y) 
+    			echo 'Data type and value both are same'; 
+		else
+    		echo 'Data type or value are different'; 
+		?> 
+	Output:
+	Data type or value are different
+
+--Apache HTTP Server
