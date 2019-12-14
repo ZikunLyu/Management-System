@@ -7,8 +7,10 @@
 
 (<a href="mailto:<?php
          echo htmlspecialchars($exec['email_CSSA_EXEC'], ENT_QUOTES,'utf-8')?>">Email</a>)
-        <a href="editexec.php?id=<?=$exec['id_CSSA_EXEC']?>">Edit</a>
-        <form action="deleteexec.php" method="POST">
+        <a href="/exec/edit?&id=<?=$exec['id_CSSA_EXEC']?>">Edit</a>
+ Created on <?php $date = new DateTime($exec['activedate_CSSA_EXEC']);
+ echo $date ->format("jS F Y");?>
+        <form action="/exec/delete" method="POST">
             <input type="hidden" name="id" value="<?=$exec['id_CSSA_EXEC']?>">
             <input type="submit" value="Delete">
         </form>
